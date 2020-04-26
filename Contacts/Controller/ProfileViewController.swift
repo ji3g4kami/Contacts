@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lastUpdatedLabel: UILabel!
     
     let viewModel: ContactViewModel
+    private let uiView = UIView(frame: .zero)
     
     init(_ viewModel: ContactViewModel) {
         self.viewModel = viewModel
@@ -45,16 +46,18 @@ class ProfileViewController: UIViewController {
         contactImage.isUserInteractionEnabled = true
         let touch = UITapGestureRecognizer(target: self, action: #selector(addUserImage))
         contactImage.addGestureRecognizer(touch)
+        
+        contactImage.addSubview(uiView)
     }
 
-
-
+    
     @objc func addUserImage() {
         let alertController = UIAlertController(title: "Change Image", message: nil, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let updateAction = UIAlertAction(title: "Change", style: .default) { [unowned self] _ in
             self.viewModel.generateImageURL()
             self.contactImage.kf.setImage(with: self.viewModel.imageURL, placeholder: UIImage(named: "avatar"))
+            UIView.transition(from: self.uiView, to: self.uiView, duration: 0.8, options: [.transitionFlipFromRight, .showHideTransitionViews] , completion: nil)
         }
         
         alertController.addAction(cancelAction)
