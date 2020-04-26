@@ -11,24 +11,31 @@ import XCTest
 
 class ContactsTests: XCTestCase {
 
+    var sut: [Contact]!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      super.setUp()
+      let data = try getData(fromJSON: "Contacts")
+      sut = try JSONDecoder().decode([Contact].self, from: data)
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+      sut = nil
+      super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testFirstContactJSONMapping() {
+        let firstContact = sut.first!
+        XCTAssertEqual(firstContact.id, 100)
+        XCTAssertEqual(firstContact.title, "Mr")
+        XCTAssertEqual(firstContact.firstName, "Steve")
+        XCTAssertEqual(firstContact.lastName, "Williams")
+        XCTAssertEqual(firstContact.address, "31 Old Street,\nWoolwich,\nLondon,\nSE15 7KE")
+        XCTAssertEqual(firstContact.phoneNumber, "07888888888")
+        XCTAssertEqual(firstContact.email, "steve@email.com")
+        XCTAssertTrue(firstContact.marketing)
+        XCTAssertEqual(firstContact.createdAt, 1587554436)
+        XCTAssertEqual(firstContact.updatedAt, 1587554536)
     }
 
 }

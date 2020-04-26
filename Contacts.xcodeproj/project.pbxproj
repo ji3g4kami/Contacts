@@ -3,16 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1447047024557EBC00B3E01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447046F24557EBC00B3E01B /* AppDelegate.swift */; };
 		1447047224557EBD00B3E01B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447047124557EBD00B3E01B /* SceneDelegate.swift */; };
-		1447047424557EBD00B3E01B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447047324557EBD00B3E01B /* ViewController.swift */; };
 		1447047924557EC000B3E01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1447047824557EC000B3E01B /* Assets.xcassets */; };
 		1447047C24557EC000B3E01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1447047A24557EC000B3E01B /* LaunchScreen.storyboard */; };
-		1447048724557EC000B3E01B /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447048624557EC000B3E01B /* ContactsTests.swift */; };
+		14470494245580B300B3E01B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14470493245580B300B3E01B /* Contact.swift */; };
+		14470496245580CF00B3E01B /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14470495245580CF00B3E01B /* ContactsTests.swift */; };
+		14470498245580D800B3E01B /* Contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 14470497245580D800B3E01B /* Contacts.json */; };
+		1447049A245580DE00B3E01B /* XCTestCase+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14470499245580DE00B3E01B /* XCTestCase+JSON.swift */; };
+		1447049D2455811B00B3E01B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447049C2455811B00B3E01B /* ApiClient.swift */; };
+		144704A02455814900B3E01B /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1447049F2455814900B3E01B /* ListingsViewController.swift */; };
+		144704A3245581B600B3E01B /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704A2245581B600B3E01B /* ContactCell.swift */; };
+		144704A6245581E300B3E01B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 144704A5245581E300B3E01B /* SnapKit */; };
+		144704A92455821800B3E01B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 144704A82455821800B3E01B /* Kingfisher */; };
+		144704AC2455827700B3E01B /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704AB2455827700B3E01B /* ContactViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +37,19 @@
 		1447046C24557EBC00B3E01B /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1447046F24557EBC00B3E01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1447047124557EBD00B3E01B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1447047324557EBD00B3E01B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1447047824557EC000B3E01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1447047B24557EC000B3E01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1447047D24557EC000B3E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1447048224557EC000B3E01B /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1447048624557EC000B3E01B /* ContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
 		1447048824557EC000B3E01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14470493245580B300B3E01B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		14470495245580CF00B3E01B /* ContactsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
+		14470497245580D800B3E01B /* Contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contacts.json; sourceTree = "<group>"; };
+		14470499245580DE00B3E01B /* XCTestCase+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+JSON.swift"; sourceTree = "<group>"; };
+		1447049C2455811B00B3E01B /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		1447049F2455814900B3E01B /* ListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		144704A2245581B600B3E01B /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		144704AB2455827700B3E01B /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144704A92455821800B3E01B /* Kingfisher in Frameworks */,
+				144704A6245581E300B3E01B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +93,12 @@
 		1447046E24557EBC00B3E01B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				144704AA2455826D00B3E01B /* ViewModel */,
+				144704A12455818700B3E01B /* View */,
+				1447049E2455813A00B3E01B /* Controller */,
+				1447049B2455810D00B3E01B /* Network */,
+				144704922455809200B3E01B /* Model */,
 				1447049124557FB900B3E01B /* Configuration */,
-				1447047324557EBD00B3E01B /* ViewController.swift */,
 				1447047824557EC000B3E01B /* Assets.xcassets */,
 				1447047A24557EC000B3E01B /* LaunchScreen.storyboard */,
 			);
@@ -88,7 +108,9 @@
 		1447048524557EC000B3E01B /* ContactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				1447048624557EC000B3E01B /* ContactsTests.swift */,
+				14470497245580D800B3E01B /* Contacts.json */,
+				14470499245580DE00B3E01B /* XCTestCase+JSON.swift */,
+				14470495245580CF00B3E01B /* ContactsTests.swift */,
 				1447048824557EC000B3E01B /* Info.plist */,
 			);
 			path = ContactsTests;
@@ -102,6 +124,46 @@
 				1447047D24557EC000B3E01B /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		144704922455809200B3E01B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14470493245580B300B3E01B /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1447049B2455810D00B3E01B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1447049C2455811B00B3E01B /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1447049E2455813A00B3E01B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1447049F2455814900B3E01B /* ListingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		144704A12455818700B3E01B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				144704A2245581B600B3E01B /* ContactCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		144704AA2455826D00B3E01B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				144704AB2455827700B3E01B /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +182,10 @@
 			dependencies = (
 			);
 			name = Contacts;
+			packageProductDependencies = (
+				144704A5245581E300B3E01B /* SnapKit */,
+				144704A82455821800B3E01B /* Kingfisher */,
+			);
 			productName = Contacts;
 			productReference = 1447046C24557EBC00B3E01B /* Contacts.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +223,7 @@
 					};
 					1447048124557EC000B3E01B = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 						TestTargetID = 1447046B24557EBC00B3E01B;
 					};
 				};
@@ -170,6 +237,10 @@
 				Base,
 			);
 			mainGroup = 1447046324557EBC00B3E01B;
+			packageReferences = (
+				144704A4245581E300B3E01B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				144704A72455821800B3E01B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 1447046D24557EBC00B3E01B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14470498245580D800B3E01B /* Contacts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1447047424557EBD00B3E01B /* ViewController.swift in Sources */,
+				14470494245580B300B3E01B /* Contact.swift in Sources */,
+				144704AC2455827700B3E01B /* ContactViewModel.swift in Sources */,
 				1447047024557EBC00B3E01B /* AppDelegate.swift in Sources */,
 				1447047224557EBD00B3E01B /* SceneDelegate.swift in Sources */,
+				1447049D2455811B00B3E01B /* ApiClient.swift in Sources */,
+				144704A3245581B600B3E01B /* ContactCell.swift in Sources */,
+				144704A02455814900B3E01B /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1447048724557EC000B3E01B /* ContactsTests.swift in Sources */,
+				1447049A245580DE00B3E01B /* XCTestCase+JSON.swift in Sources */,
+				14470496245580CF00B3E01B /* ContactsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +472,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND2LGZT6B5;
 				INFOPLIST_FILE = ContactsTests/Info.plist;
@@ -406,6 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dengli.ContactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
@@ -417,6 +496,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND2LGZT6B5;
 				INFOPLIST_FILE = ContactsTests/Info.plist;
@@ -465,6 +545,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		144704A4245581E300B3E01B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		144704A72455821800B3E01B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		144704A5245581E300B3E01B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 144704A4245581E300B3E01B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		144704A82455821800B3E01B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 144704A72455821800B3E01B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1447046424557EBC00B3E01B /* Project object */;
 }
