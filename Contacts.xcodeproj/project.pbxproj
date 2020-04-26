@@ -27,6 +27,7 @@
 		144704B524558EDF00B3E01B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 144704B424558EDF00B3E01B /* RealmSwift */; };
 		144704B824558F1300B3E01B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704B724558F1300B3E01B /* RealmManager.swift */; };
 		144704BA24558F4B00B3E01B /* RContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704B924558F4B00B3E01B /* RContact.swift */; };
+		144704BE2455968100B3E01B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 144704BD2455968100B3E01B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		144704AE24558BD700B3E01B /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		144704B724558F1300B3E01B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		144704B924558F4B00B3E01B /* RContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RContact.swift; sourceTree = "<group>"; };
+		144704BD2455968100B3E01B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		1447046324557EBC00B3E01B = {
 			isa = PBXGroup;
 			children = (
+				144704BD2455968100B3E01B /* README.md */,
 				1447046E24557EBC00B3E01B /* Contacts */,
 				1447048524557EC000B3E01B /* ContactsTests */,
 				1447046D24557EBC00B3E01B /* Products */,
@@ -285,6 +288,7 @@
 			files = (
 				144704B024558BD700B3E01B /* ProfileViewController.xib in Resources */,
 				1447047C24557EC000B3E01B /* LaunchScreen.storyboard in Resources */,
+				144704BE2455968100B3E01B /* README.md in Resources */,
 				1447047924557EC000B3E01B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
