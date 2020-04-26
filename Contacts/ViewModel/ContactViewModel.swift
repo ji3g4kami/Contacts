@@ -34,6 +34,25 @@ class ContactViewModel {
         return UserDefaults.standard.url(forKey: String(id))
     }
     
+    init(_ rContact: RContact) {
+        self.id = rContact.id
+        self.title = rContact.title
+        self.firstName = rContact.firstName
+        self.lastName = rContact.lastName
+        self.fullNameWithTitle = "\(rContact.title). \(rContact.firstName) \(rContact.lastName)"
+        self.address = rContact.address
+        self.phoneNumber = rContact.phoneNumber
+        self.email = rContact.email
+        self.marketing = rContact.marketing
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm E, d MMM y"
+        self.createdAt = rContact.createdAt
+        self.creationFormattedString = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(rContact.createdAt)))
+        self.updatedAt = rContact.updatedAt
+    }
+    
+    /* UI displays the data from Realm only, thus commenting it out.
     init(_ contact: Contact) {
         self.id = contact.id
         self.title = contact.title
@@ -51,6 +70,7 @@ class ContactViewModel {
         self.creationFormattedString = dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(contact.createdAt)))
         self.updatedAt = contact.updatedAt ?? -1
     }
+    */
     
     func generateImageURL() {
         let eye = (1..<10).randomElement()!

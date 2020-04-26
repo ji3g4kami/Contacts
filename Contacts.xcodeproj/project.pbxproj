@@ -23,6 +23,10 @@
 		144704AC2455827700B3E01B /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704AB2455827700B3E01B /* ContactViewModel.swift */; };
 		144704AF24558BD700B3E01B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704AD24558BD700B3E01B /* ProfileViewController.swift */; };
 		144704B024558BD700B3E01B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144704AE24558BD700B3E01B /* ProfileViewController.xib */; };
+		144704B324558EDF00B3E01B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 144704B224558EDF00B3E01B /* Realm */; };
+		144704B524558EDF00B3E01B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 144704B424558EDF00B3E01B /* RealmSwift */; };
+		144704B824558F1300B3E01B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704B724558F1300B3E01B /* RealmManager.swift */; };
+		144704BA24558F4B00B3E01B /* RContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704B924558F4B00B3E01B /* RContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,8 @@
 		144704AB2455827700B3E01B /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		144704AD24558BD700B3E01B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		144704AE24558BD700B3E01B /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		144704B724558F1300B3E01B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		144704B924558F4B00B3E01B /* RContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144704B524558EDF00B3E01B /* RealmSwift in Frameworks */,
+				144704B324558EDF00B3E01B /* Realm in Frameworks */,
 				144704A92455821800B3E01B /* Kingfisher in Frameworks */,
 				144704A6245581E300B3E01B /* SnapKit in Frameworks */,
 			);
@@ -97,14 +105,15 @@
 		1447046E24557EBC00B3E01B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				144704AA2455826D00B3E01B /* ViewModel */,
-				144704A12455818700B3E01B /* View */,
-				1447049E2455813A00B3E01B /* Controller */,
-				1447049B2455810D00B3E01B /* Network */,
-				144704922455809200B3E01B /* Model */,
-				1447049124557FB900B3E01B /* Configuration */,
 				1447047824557EC000B3E01B /* Assets.xcassets */,
+				1447049124557FB900B3E01B /* Configuration */,
+				1447049E2455813A00B3E01B /* Controller */,
+				144704B624558EF400B3E01B /* DataPersistence */,
 				1447047A24557EC000B3E01B /* LaunchScreen.storyboard */,
+				144704922455809200B3E01B /* Model */,
+				1447049B2455810D00B3E01B /* Network */,
+				144704A12455818700B3E01B /* View */,
+				144704AA2455826D00B3E01B /* ViewModel */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				14470493245580B300B3E01B /* Contact.swift */,
+				144704B924558F4B00B3E01B /* RContact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +182,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		144704B624558EF400B3E01B /* DataPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				144704B724558F1300B3E01B /* RealmManager.swift */,
+			);
+			path = DataPersistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +209,8 @@
 			packageProductDependencies = (
 				144704A5245581E300B3E01B /* SnapKit */,
 				144704A82455821800B3E01B /* Kingfisher */,
+				144704B224558EDF00B3E01B /* Realm */,
+				144704B424558EDF00B3E01B /* RealmSwift */,
 			);
 			productName = Contacts;
 			productReference = 1447046C24557EBC00B3E01B /* Contacts.app */;
@@ -246,6 +266,7 @@
 			packageReferences = (
 				144704A4245581E300B3E01B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				144704A72455821800B3E01B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				144704B124558EDF00B3E01B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 1447046D24557EBC00B3E01B /* Products */;
 			projectDirPath = "";
@@ -288,9 +309,11 @@
 				1447047024557EBC00B3E01B /* AppDelegate.swift in Sources */,
 				1447047224557EBD00B3E01B /* SceneDelegate.swift in Sources */,
 				1447049D2455811B00B3E01B /* ApiClient.swift in Sources */,
+				144704B824558F1300B3E01B /* RealmManager.swift in Sources */,
 				144704A3245581B600B3E01B /* ContactCell.swift in Sources */,
 				144704AF24558BD700B3E01B /* ProfileViewController.swift in Sources */,
 				144704A02455814900B3E01B /* ListingsViewController.swift in Sources */,
+				144704BA24558F4B00B3E01B /* RContact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +594,14 @@
 				minimumVersion = 5.13.4;
 			};
 		};
+		144704B124558EDF00B3E01B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -583,6 +614,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 144704A72455821800B3E01B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		144704B224558EDF00B3E01B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 144704B124558EDF00B3E01B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		144704B424558EDF00B3E01B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 144704B124558EDF00B3E01B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

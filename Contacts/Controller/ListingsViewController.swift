@@ -1,13 +1,24 @@
 import UIKit
+import RealmSwift
 
 class ListingsViewController: UITableViewController {
     
-    var viewModels: [ContactViewModel] = []
+    // MARK: - Instance Properties
+    var viewModels: [ContactViewModel] {
+        rContacts.map { ContactViewModel($0) }
+    }
+    
+    lazy var rContacts: Results<RContact> = { RealmManager.shared.readContacts() }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         refreshData()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let results = RealmManager.shared.readContacts()
+        results.forEach { contact in
+            print(contact.firstName)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +50,7 @@ class ListingsViewController: UITableViewController {
                 return
             }
             
-            self.viewModels = contacts!.map { ContactViewModel($0) }
+            RealmManager.shared.updateContacts(contacts!)
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
