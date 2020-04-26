@@ -1,5 +1,4 @@
 import UIKit
-import CoreData
 
 class ListingsViewController: UITableViewController {
     
@@ -61,6 +60,8 @@ class ListingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let viewModel = viewModels[indexPath.row]
+        let profileViewController = ProfileViewController(viewModel)
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
 }

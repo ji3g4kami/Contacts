@@ -21,6 +21,8 @@
 		144704A6245581E300B3E01B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 144704A5245581E300B3E01B /* SnapKit */; };
 		144704A92455821800B3E01B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 144704A82455821800B3E01B /* Kingfisher */; };
 		144704AC2455827700B3E01B /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704AB2455827700B3E01B /* ContactViewModel.swift */; };
+		144704AF24558BD700B3E01B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144704AD24558BD700B3E01B /* ProfileViewController.swift */; };
+		144704B024558BD700B3E01B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144704AE24558BD700B3E01B /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1447049F2455814900B3E01B /* ListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		144704A2245581B600B3E01B /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		144704AB2455827700B3E01B /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		144704AD24558BD700B3E01B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		144704AE24558BD700B3E01B /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		1447049E2455813A00B3E01B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				144704AD24558BD700B3E01B /* ProfileViewController.swift */,
+				144704AE24558BD700B3E01B /* ProfileViewController.xib */,
 				1447049F2455814900B3E01B /* ListingsViewController.swift */,
 			);
 			path = Controller;
@@ -256,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144704B024558BD700B3E01B /* ProfileViewController.xib in Resources */,
 				1447047C24557EC000B3E01B /* LaunchScreen.storyboard in Resources */,
 				1447047924557EC000B3E01B /* Assets.xcassets in Resources */,
 			);
@@ -282,6 +289,7 @@
 				1447047224557EBD00B3E01B /* SceneDelegate.swift in Sources */,
 				1447049D2455811B00B3E01B /* ApiClient.swift in Sources */,
 				144704A3245581B600B3E01B /* ContactCell.swift in Sources */,
+				144704AF24558BD700B3E01B /* ProfileViewController.swift in Sources */,
 				144704A02455814900B3E01B /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
